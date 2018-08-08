@@ -13,7 +13,9 @@ public class RawDBDemoGeoIPLocationService {
     private DatabaseReader dbReader;
 
     public RawDBDemoGeoIPLocationService() throws IOException {
-        File database = new File("your-path-to-db-file");
+
+        File database = new File(this.getClass().getClassLoader()
+                .getResource("GeoLite2-City.mmdb").getFile());
         dbReader = new DatabaseReader.Builder(database).build();
     }
 
