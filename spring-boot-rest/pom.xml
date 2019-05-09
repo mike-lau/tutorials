@@ -25,16 +25,32 @@
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-xml</artifactId>
         </dependency>
-      
+        <!-- We'll need to comment out the jackson-dataformat-xml dependency if we want to use XStream: -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-oxm</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+            <version>${xstream.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
         </dependency>
-       <dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>    
-    
+        </dependency>
+        
+        <!-- Spring HATEOAS -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-hateoas</artifactId>
+        </dependency>
+
         <!-- util -->
 
         <dependency>
@@ -53,6 +69,11 @@
             <artifactId>htmlunit</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>${modelmapper.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -67,5 +88,7 @@
     <properties>
         <start-class>com.baeldung.SpringBootRestApplication</start-class>
         <guava.version>27.0.1-jre</guava.version>
+        <xstream.version>1.4.11.1</xstream.version>
+        <modelmapper.version>2.3.3</modelmapper.version>
     </properties>
 </project>
