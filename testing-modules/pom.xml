@@ -14,6 +14,8 @@
     </parent>
 
     <modules>
+        <module>assertion-libraries</module>
+        <module>easy-random</module>
         <module>gatling</module>
         <module>groovy-spock</module>
         <module>junit-5</module>
@@ -30,8 +32,12 @@
         <module>selenium-junit-testng</module>
         <module>spring-testing</module>
         <module>test-containers</module>
-        <module>testing</module>
         <module>testng</module>
         <module>junit-5-basics</module>
+        <module>easymock</module>
+        <module>junit-5-advanced</module>
+        <module>xmlunit-2</module>
+        <module>junit-4</module>
+        <module>testing-libraries</module>
     </modules>
 </project>
